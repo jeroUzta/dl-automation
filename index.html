@@ -1,0 +1,938 @@
+<html lang="fr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DL - Automation, Automatisation IA pour cabinets de courtage</title>
+  <meta name="description"
+    content="Conception et développement de workflows d'automatisation pour entreprises. Vos dossiers traités en 18 minutes, pas 3 heures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <button class="nav-logo" onclick="showPage('home')" aria-label="Accueil">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect x="2" y="2" width="10" height="24" rx="2" fill="currentColor" opacity="0.9" />
+          <rect x="16" y="2" width="10" height="10" rx="2" fill="var(--color-primary)" />
+          <rect x="16" y="16" width="10" height="10" rx="2" fill="var(--color-primary)" opacity="0.5" />
+        </svg>
+        DL - Automation
+      </button>
+      <div class="nav-links">
+        <button class="nav-link active" id="tab-home" onclick="showPage('home')">Accueil</button>
+        <button class="nav-link" id="tab-about" onclick="showPage('about')">Qui suis-je ?</button>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Changer de thème">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <a href="https://tally.so/r/rjLPx5" target="_blank" rel="noopener noreferrer" class="btn-nav">
+          <span>J'essaie le pilote</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════ PAGE : ACCUEIL ══════════════ -->
+  <div id="page-home" class="page active">
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
+            <circle cx="5" cy="5" r="5" />
+          </svg>
+          Spécialiste rachat de crédit · 3 cabinets pilotés
+        </div>
+        <h1>Vos dossiers traités en <em>18 minutes.</em> Pas 3 heures.</h1>
+        <p class="hero-sub">Je déploie un système d'automatisation dans votre cabinet en 10 jours. Vos documents
+          entrent, vos rapports sortent. Votre équipe vérifie, elle ne traite plus.</p>
+        <div class="hero-actions">
+          <a href="https://tally.so/r/rjLPx5" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            J'essaie le pilote — satisfait ou remboursé
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="https://cal.eu/dl-automatisation/appel-decouverte" target="_blank" rel="noopener noreferrer"
+            class="btn-ghost">Appel découverte — 30 min, gratuit</a>
+        </div>
+        <div class="hero-reassurance">
+          <span class="hero-reassurance-item">Résultats en 48h</span>
+          <span class="hero-reassurance-item">Sans engagement</span>
+          <span class="hero-reassurance-item">Satisfait ou remboursé</span>
+          <span class="hero-reassurance-item">Données RGPD protégées</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats-bar">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="fade-in-up">
+            <div class="stat-value">18 min</div>
+            <div class="stat-label">par dossier (vs 3h)</div>
+            <div class="stat-context">mesuré sur dossier réel</div>
+          </div>
+          <div class="fade-in-up">
+            <div class="stat-value">0%</div>
+            <div class="stat-label">erreurs de saisie</div>
+            <div class="stat-context">de ressaisie manuelle</div>
+          </div>
+          <div class="fade-in-up">
+            <div class="stat-value">10 j</div>
+            <div class="stat-label">pour déployer</div>
+            <div class="stat-context">livraison garantie</div>
+          </div>
+          <div class="fade-in-up">
+            <div class="stat-value">24/7</div>
+            <div class="stat-label">disponibilité</div>
+            <div class="stat-context">sans congé ni vacances</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-label">Résultats mesurés</div>
+        <h2 class="section-title">Ce que ça change concrètement</h2>
+        <p class="section-intro">Résultats mesurés sur un cabinet partenaire après déploiement du système.</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Indicateur</th>
+                <th class="td-before">Avant</th>
+                <th>Après</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Temps par dossier</td>
+                <td class="td-before">3 heures</td>
+                <td class="td-after">18 minutes</td>
+              </tr>
+              <tr>
+                <td>Saisie des données</td>
+                <td class="td-before">Manuelle</td>
+                <td class="td-after">Automatique</td>
+              </tr>
+              <tr>
+                <td>Erreurs de ressaisie</td>
+                <td class="td-before">Fréquentes</td>
+                <td class="td-after">Quasi nulles</td>
+              </tr>
+              <tr>
+                <td>Rapport client</td>
+                <td class="td-before">À refaire à chaque fois</td>
+                <td class="td-after">Prêt à envoyer</td>
+              </tr>
+              <tr>
+                <td>Dossiers / semaine</td>
+                <td class="td-before">14</td>
+                <td class="td-after">50</td>
+              </tr>
+              <tr>
+                <td>Temps libéré / semaine</td>
+                <td class="td-before">—</td>
+                <td class="td-after">+30 heures</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section"
+      style="background:var(--color-surface);border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
+      <div class="container">
+        <div class="section-label">Comment ça marche</div>
+        <h2 class="section-title">Ce que le système fait</h2>
+        <div class="steps">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-title">Réception des documents</div>
+            <div class="step-desc">PDF, scans, photos, déposés via un formulaire sécurisé par votre équipe ou vos
+              clients.</div>
+            <ul class="step-details">
+              <li>Bulletins de salaire (1, 2, 3 derniers mois)</li>
+              <li>Avis d'imposition N et N−1</li>
+              <li>Relevés de compte bancaire</li>
+              <li>Tableaux d'amortissement des crédits en cours</li>
+              <li>Pièces d'identité et justificatifs de domicile</li>
+            </ul>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-title">Analyse IA</div>
+            <div class="step-desc">L'IA lit, comprend et extrait les données clés de chaque document sans intervention
+              manuelle.</div>
+            <ul class="step-details">
+              <li>Revenus nets mensuels (salaires, primes, pensions)</li>
+              <li>Charges fixes et mensualités des crédits en cours</li>
+              <li>Taux d'endettement actuel calculé automatiquement</li>
+              <li>Capacité de remboursement et reste à vivre estimés</li>
+              <li>Alertes sur incohérences ou documents manquants</li>
+            </ul>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-title">Suivi centralisé en temps réel</div>
+            <div class="step-desc">Votre base de suivi est alimentée automatiquement avec l'avancement de chaque
+              dossier.</div>
+            <ul class="step-details">
+              <li>Statut du dossier mis à jour à chaque étape</li>
+              <li>Score de financement automatique (vert / orange / rouge)</li>
+              <li>Documents manquants listés avec relance automatique</li>
+              <li>Historique client complet accessible en 1 clic</li>
+              <li>Compatible avec vos outils de gestion existants</li>
+            </ul>
+          </div>
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-title">Rapport prêt à envoyer</div>
+            <div class="step-desc">Un rapport structuré est généré automatiquement et envoyé directement au courtier
+              responsable.</div>
+            <ul class="step-details">
+              <li>Synthèse financière complète du client</li>
+              <li>Recommandation de rachat : éligibilité et conditions estimées</li>
+              <li>Tableau de capacité et simulation mensualité cible</li>
+              <li>Points de vigilance identifiés (risques, anomalies)</li>
+              <li>Format adapté à vos modèles (Word, PDF, Google Doc…)</li>
+            </ul>
+          </div>
+          <div class="step-card">
+            <div class="step-number">5</div>
+            <div class="step-title">Relances &amp; suivi automatiques</div>
+            <div class="step-desc">Une fois le rapport envoyé, le système continue de travailler. Zéro relance manuelle
+              à gérer.</div>
+            <ul class="step-details">
+              <li>Notification équipe à chaque changement de statut dossier</li>
+              <li>Relance automatique si documents manquants ou incomplets</li>
+              <li>Alerte si un dossier dépasse un délai défini</li>
+              <li>Récapitulatif hebdomadaire envoyé automatiquement</li>
+              <li>Votre équipe est informée sans avoir à vérifier</li>
+            </ul>
+          </div>
+          <div class="step-card">
+            <div class="step-number">6</div>
+            <div class="step-title">Configuré pour votre cabinet</div>
+            <div class="step-desc">Pas une solution générique. Chaque déploiement est adapté à votre organisation, vos
+              outils, vos modèles.</div>
+            <ul class="step-details">
+              <li>Audit de votre process actuel inclus (offert)</li>
+              <li>Connexion à vos outils existants — pas de migration</li>
+              <li>Modèles de rapports adaptés à votre charte et usage</li>
+              <li>Équipe opérationnelle en 30 minutes</li>
+              <li>Évolutif selon la croissance de votre volume</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--color-surface)">
+      <div class="container">
+        <div class="section-label">ROI immédiat</div>
+        <h2 class="section-title">Ce que ça coûte de ne pas automatiser</h2>
+        <p class="section-intro">Comparez le coût réel d'un analyste manuel avec le coût du système automatisé.</p>
+        <div class="cost-grid">
+          <div class="cost-card before">
+            <div class="cost-label">Analyste manuel</div>
+            <div class="cost-price">2 000 – 2 500 €</div>
+            <div class="cost-sub">par mois</div>
+            <ul class="cost-perks">
+              <li>35h / semaine</li>
+              <li>Erreurs fréquentes</li>
+              <li>Bloqué pendant les congés</li>
+              <li>+1 recrutement si volume ↑</li>
+            </ul>
+          </div>
+          <div class="cost-card after">
+            <div class="cost-label">Système automatisé</div>
+            <div class="cost-price">350 €</div>
+            <div class="cost-sub">par mois (Pack Essentiel)</div>
+            <ul class="cost-perks">
+              <li>Disponible 24h/24, 7j/7</li>
+              <li>Zéro erreur de ressaisie</li>
+              <li>Volume illimité</li>
+              <li>Rentabilisé dès le 1er mois</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-label">Tarifs</div>
+        <h2 class="section-title">Choisissez votre formule</h2>
+        <p class="section-intro">Sans engagement sur le Pilote. Résiliable à tout moment sur les packs.</p>
+        <div class="roi-callout">
+          <div class="roi-callout-icon">&#128161;</div>
+          <div class="roi-callout-text">
+            Un courtier rachat de crédit touche en moyenne <strong>300 à 800 € de commission</strong> par dossier
+            financé.
+            Si le système vous permet de traiter <strong>2 dossiers supplémentaires</strong> dans le mois,
+            le Pilote est rentabilisé dès la première semaine.
+          </div>
+        </div>
+        <div class="avail-notice">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            style="flex-shrink:0;color:var(--color-primary)">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 8v4l3 3" />
+          </svg>
+          Je travaille avec <strong>2 nouveaux cabinets par mois</strong> — les prochains créneaux sont limités.
+        </div>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <div class="price-badge">Démarrer</div>
+            <div class="price-name">Pilote Réel</div>
+            <div class="price-amount">350 €</div>
+            <div class="price-billing">paiement unique, aucun engagement</div>
+            <ul class="price-features">
+              <li>5 dossiers test sur votre cabinet</li>
+              <li>Formulaire sécurisé</li>
+              <li>Analyse IA des documents</li>
+              <li>Base de suivi dans vos outils existants</li>
+              <li>Rapport prêt à envoyer à vos clients</li>
+              <li>Livraison en 48h</li>
+            </ul>
+            <div class="price-guarantee">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 12l2 2 4-4" />
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              Satisfait ou remboursé
+            </div>
+            <a href="https://tally.so/r/rjLPx5" target="_blank" rel="noopener noreferrer" class="price-cta">J'essaie le
+              pilote →</a>
+          </div>
+          <div class="price-card featured">
+            <div class="price-badge">Recommandé</div>
+            <div class="price-name">Pack Essentiel</div>
+            <div class="price-amount">2 200 €</div>
+            <div class="price-billing">setup + 350 € / mois, résiliable</div>
+            <div class="price-roi">✦ ROI moyen constaté : 3 semaines</div>
+            <ul class="price-features">
+              <li>Dossiers illimités</li>
+              <li>Formulaire sécurisé illimité</li>
+              <li>Analyse IA des documents</li>
+              <li>Base de suivi connectée à vos outils</li>
+              <li>Rapports automatisés prêts à envoyer</li>
+              <li>Notifications équipe</li>
+              <li>Livraison en 15 jours</li>
+            </ul>
+            <a href="https://cal.eu/dl-automatisation/appel-decouverte" target="_blank" rel="noopener noreferrer"
+              class="price-cta">Voir si c'est fait pour moi →</a>
+          </div>
+          <div class="price-card">
+            <div class="price-badge">Sur mesure</div>
+            <div class="price-name">Pack Complet</div>
+            <div class="price-amount">Sur devis</div>
+            <div class="price-billing">mensuel résiliable</div>
+            <ul class="price-features">
+              <li>Tout le Pack Essentiel</li>
+              <li>Analyse financière approfondie</li>
+              <li>Analyse crédit complète</li>
+              <li>Interface CRM dédiée</li>
+              <li>Connexion à vos outils existants</li>
+              <li>Support premium illimité</li>
+            </ul>
+            <a href="https://tally.so/r/zxZ168" target="_blank" rel="noopener noreferrer" class="price-cta">Discutons de
+              votre projet →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ TÉMOIGNAGES ══ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-label">Ils ont testé</div>
+        <h2 class="section-title">Ce que disent les premiers cabinets</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card fade-in-up">
+            <div class="testimonial-quote">"En 3 semaines, on a traité autant de dossiers qu'en 2 mois avant. Mon équipe
+              ne ressaisit plus rien — elle valide et envoie."</div>
+            <div class="testimonial-author">
+              <div class="testimonial-name">Cabinet de courtage</div>
+              <div class="testimonial-role">Région parisienne · 6 courtiers</div>
+            </div>
+          </div>
+          <div class="testimonial-card fade-in-up">
+            <div class="testimonial-quote">"Le pilote m'a convaincu en 48h. J'ai signé le Pack Essentiel la semaine
+              suivante. Le ROI était évident dès le premier dossier traité."</div>
+            <div class="testimonial-author">
+              <div class="testimonial-name">Courtier indépendant</div>
+              <div class="testimonial-role">Lyon · Spécialiste rachat de crédit</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FAQ ══ -->
+    <section class="section" style="background:var(--color-surface);border-top:1px solid var(--color-divider)">
+      <div class="container">
+        <div class="section-label">Questions fréquentes</div>
+        <h2 class="section-title">Ce que vous vous demandez sûrement</h2>
+        <div class="faq-list">
+          <details class="faq-item fade-in-up">
+            <summary class="faq-question">Est-ce que ça marche avec mes outils actuels ?</summary>
+            <p class="faq-answer">Oui. Le système se connecte à vos outils existants — CRM, tableurs, Google Drive,
+              messagerie, logiciels métier. Aucune migration, aucune formation de votre équipe à de nouveaux logiciels.
+            </p>
+          </details>
+          <details class="faq-item fade-in-up">
+            <summary class="faq-question">Que se passe-t-il si le résultat ne me convainc pas ?</summary>
+            <p class="faq-answer">Le Pack Pilote est satisfait ou remboursé. Si après les 5 dossiers de test vous n'êtes
+              pas convaincu par les résultats, vous êtes intégralement remboursé. Sans question, sans conditions.</p>
+          </details>
+          <details class="faq-item fade-in-up">
+            <summary class="faq-question">Combien de temps pour que tout soit en place ?</summary>
+            <p class="faq-answer">Le pilote (5 dossiers) est livré en 48h. Le déploiement complet du Pack Essentiel
+              prend 10 jours ouvrés à partir de la réception de vos accès et modèles.</p>
+          </details>
+          <details class="faq-item fade-in-up">
+            <summary class="faq-question">Qui gère les mises à jour et la maintenance ?</summary>
+            <p class="faq-answer">Moi. Si un outil évolue, un format change ou un bug apparaît, je m'en occupe sans
+              surcoût pour les packs mensuels. C'est inclus dans l'abonnement.</p>
+          </details>
+          <details class="faq-item fade-in-up">
+            <summary class="faq-question">Mes données clients sont-elles en sécurité ?</summary>
+            <p class="faq-answer">Les données sont chiffrées, les accès restreints au strict nécessaire et le traitement
+              est conforme au RGPD dès la conception. Une convention de traitement des données (DPA) peut être signée
+              sur demande.</p>
+          </details>
+          <details class="faq-item fade-in-up">
+            <summary class="faq-question">Faut-il former mon équipe ?</summary>
+            <p class="faq-answer">Non. L'interface que voit votre équipe est celle qu'elle utilise déjà — email, Drive,
+              votre CRM. Le système travaille en arrière-plan. La courbe d'apprentissage est quasi nulle.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container" style="max-width:var(--content-narrow);text-align:center">
+        <div class="section-label">Parlons-en</div>
+        <h2 class="section-title">Un appel de 30 min pour voir si c'est fait pour vous</h2>
+        <p class="section-intro">Pas de pitch agressif. On regarde ensemble votre process actuel et je vous dis
+          honnêtement si l'automatisation peut vous faire gagner du temps.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);justify-content:center;margin-top:var(--space-8)">
+          <a href="https://tally.so/r/rjLPx5" target="_blank" rel="noopener noreferrer" class="btn-cta">
+            J'essaie le pilote — satisfait ou remboursé
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="https://cal.eu/dl-automatisation/appel-decouverte" target="_blank" rel="noopener noreferrer"
+            style="color:var(--color-text-inverse);padding:var(--space-4) var(--space-6);border-radius:var(--radius-full);border:1px solid oklch(from var(--color-text-inverse) l c h/0.25);font-size:var(--text-base);font-weight:500;text-decoration:none;display:inline-flex;align-items:center">
+            Appel découverte gratuit
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /page-home -->
+
+  <!-- ══════════════ PAGE : QUI SUIS-JE ══════════════ -->
+  <div id="page-about" class="page">
+
+    <section class="about-hero">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <div class="hero-badge">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
+                <circle cx="5" cy="5" r="5" />
+              </svg>
+              France / Solutions sur mesure pour courtiers
+            </div>
+            <h1 class="about-h1">Dorian<br><em>Longuépée</em></h1>
+            <p class="about-tagline">Spécialiste en automatisation IA pour les cabinets de courtage, parce que j'ai
+              travaillé avec eux pendant 7 ans.</p>
+            <blockquote class="quote-block">"J'ai passé 7 ans à voir des équipes passer leurs journées sur des tâches
+              qui pourraient être automatisées. Aujourd'hui je règle ça."</blockquote>
+            <div style="display:flex;flex-wrap:wrap;gap:var(--space-3)">
+              <a href="https://cal.eu/dl-automatisation/appel-decouverte" target="_blank" rel="noopener noreferrer"
+                class="btn-primary">
+                Réserver un appel
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <button class="btn-ghost" onclick="showPage('home')">Voir la solution</button>
+            </div>
+          </div>
+          <div class="avatar-block">
+            <img src="pp.jpg" alt="Dorian Longuépée" style="width: 100%; height: 100%; object-fit: cover;">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-label">Mon parcours</div>
+        <h2 class="section-title">7 ans dans le secteur financier</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:start">
+          <div>
+            <p style="color:var(--color-text-muted);line-height:1.7;margin-bottom:var(--space-6)">Avant de développer
+              des systèmes d'automatisation, j'ai travaillé pendant <strong style="color:var(--color-text)">7 ans dans
+                le secteur commercial et financier</strong>. Dans mon métier, j'étais très souvent en contact avec des
+              courtiers experts en regroupement de financement.</p>
+            <p style="color:var(--color-text-muted);line-height:1.7;margin-bottom:var(--space-6)">Je connaissais leur
+              demande et, au fil du temps, comment leur faire gagner du temps… mais je le faisais manuellement.</p>
+            <p style="color:var(--color-text-muted);line-height:1.7"><strong style="color:var(--color-text)">J'ai vu de
+                l'intérieur comment les équipes traitent les dossiers</strong> : la collecte manuelle de documents, la
+              ressaisie dans les outils, les relances oubliées, les rapports à refaire. Des heures de travail à faible
+              valeur ajoutée, répétées chaque jour.</p>
+          </div>
+          <div
+            style="background:var(--color-surface);border:1px solid oklch(from var(--color-text) l c h/0.08);border-radius:var(--radius-xl);padding:var(--space-8)">
+            <div class="section-label" style="margin-bottom:var(--space-6)">Ce qui a tout changé</div>
+            <p
+              style="color:var(--color-text-muted);line-height:1.7;font-style:italic;font-family:var(--font-display);font-size:var(--text-lg)">
+              "C'est cette frustration, et la conviction qu'il existait une meilleure façon de travailler, qui m'a
+              poussé à me former à l'automatisation et à l'IA."</p>
+          </div>
+        </div>
+        <div class="equation-block">
+          <div class="equation">
+            <span class="eq-term">Expérience commerciale</span>
+            <span class="eq-plus">+</span>
+            <span class="eq-term">Relation courtiers</span>
+            <span class="eq-plus">+</span>
+            <span class="eq-term">Informatique</span>
+            <span class="eq-plus">+</span>
+            <span class="eq-term">IA</span>
+            <span class="eq-plus">=</span>
+            <div class="eq-result"><strong>Solution clé en main</strong>, sans jargon, sans formation complexe pour
+              votre équipe.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section"
+      style="background:var(--color-surface);border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
+      <div class="container">
+        <div class="section-label">Compatibilité</div>
+        <h2 class="section-title">Connecté à vos outils existants</h2>
+        <p class="section-intro" style="margin-bottom:0">Le système s'adapte à votre environnement actuel. Pas besoin de
+          tout changer ni de former vos équipes à de nouveaux logiciels.</p>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <div class="tool-dot"></div>
+            <div>
+              <div class="tool-name">Vos outils de gestion</div>
+              <div class="tool-desc">CRM, tableurs, logiciels métier, messagerie — connexion sur mesure selon votre
+                organisation</div>
+            </div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-dot"></div>
+            <div>
+              <div class="tool-name">Vos canaux de réception</div>
+              <div class="tool-desc">E-mail, Drive, WeTransfer, formulaire dédié — les documents arrivent comme
+                aujourd'hui</div>
+            </div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-dot"></div>
+            <div>
+              <div class="tool-name">Intelligence artificielle</div>
+              <div class="tool-desc">Modèles de dernière génération pour lire, comprendre et extraire l'information de
+                vos documents financiers</div>
+            </div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-dot"></div>
+            <div>
+              <div class="tool-name">Vos formats de sortie</div>
+              <div class="tool-desc">Rapport Word, PDF, Excel, Google Doc — dans le format que vos équipes utilisent
+                déjà</div>
+            </div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-dot"></div>
+            <div>
+              <div class="tool-name">Sécurité &amp; RGPD</div>
+              <div class="tool-desc">Données chiffrées, accès restreint, conformité intégrée dès la conception de chaque
+                workflow</div>
+            </div>
+          </div>
+          <div class="tool-card tool-card-highlight">
+            <div class="tool-dot"></div>
+            <div>
+              <div class="tool-name">Audit &amp; recommandations offerts</div>
+              <div class="tool-desc">Analyse de votre process actuel incluse : on identifie ensemble les connexions les
+                plus rentables pour votre cabinet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-label">Ma philosophie</div>
+        <h2 class="section-title">Résultats d'abord, technologie ensuite</h2>
+        <div class="phil-grid">
+          <div class="phil-card">
+            <div class="phil-icon">🎯</div>
+            <div class="phil-title">Pas de jargon</div>
+            <p class="phil-text">Je ne vends pas de la technologie. Je règle un problème opérationnel concret : trop de
+              temps passé sur des tâches qui n'apportent aucune valeur à vos clients.</p>
+          </div>
+          <div class="phil-card">
+            <div class="phil-icon">✅</div>
+            <div class="phil-title">Vous validez étape par étape</div>
+            <p class="phil-text">Chaque système que je déploie est testé sur de vrais dossiers avant livraison. Vous ne
+              découvrez pas le résultat le jour de la mise en production, vous le validez en avance.</p>
+          </div>
+          <div class="phil-card">
+            <div class="phil-icon">📍</div>
+            <div class="phil-title">Disponible partout en France</div>
+            <p class="phil-text">Basé à Tours, j'interviens à distance pour les cabinets de toute la France. Les appels,
+              démonstrations et suivis se font en visioconférence.</p>
+          </div>
+          <div class="phil-card">
+            <div class="phil-icon">🔒</div>
+            <div class="phil-title">Données traitées avec soin</div>
+            <p class="phil-text">Je traite des données financières sensibles. Confidentialité et conformité RGPD sont
+              intégrées dès la conception de chaque workflow, pas en option.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container" style="max-width:var(--content-narrow);text-align:center">
+        <div class="section-label">Parlons-en</div>
+        <h2 class="section-title">Un appel suffit pour savoir si je peux vous aider</h2>
+        <p class="section-intro">30 minutes, pas de pitch. On regarde ensemble votre process et je vous dis honnêtement
+          ce qui peut être automatisé.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);justify-content:center;margin-top:var(--space-8)">
+          <a href="https://cal.eu/dl-automatisation/appel-decouverte" target="_blank" rel="noopener noreferrer"
+            class="btn-cta">
+            Réserver mon appel gratuit
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="https://tally.so/r/zxZ168" target="_blank" rel="noopener noreferrer"
+            style="color:var(--color-text-inverse);padding:var(--space-4) var(--space-6);border-radius:var(--radius-full);border:1px solid oklch(from var(--color-text-inverse) l c h/0.25);font-size:var(--text-base);font-weight:500;text-decoration:none;display:inline-flex;align-items:center">
+            Remplir le formulaire
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /page-about -->
+
+
+  <!-- PAGE: MENTIONS LÉGALES -->
+  <div id="page-mentions" class="page">
+    <div class="legal-page">
+      <button class="legal-back" onclick="showPage('home')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 5l-7 7 7 7" />
+        </svg>
+        Retour à l'accueil
+      </button>
+      <h1>Mentions légales</h1>
+      <p class="legal-date">En vigueur au 14 avril 2026</p>
+
+      <h2>Éditeur du site</h2>
+      <p>
+        Ce site est édité par <strong>Dorian Longuépée</strong>, auto-entrepreneur exerçant sous le nom commercial
+        <strong>DL - Automation</strong>.<br>
+        Siège social : Tours, France<br>
+        E-mail : <a href="mailto:dl.automatisation@gmail.com">dl.automatisation@gmail.com</a><br>
+        SIRET : <em>10322943100012</em><br>
+        TVA non applicable – Article 293 B du CGI
+      </p>
+
+      <hr class="legal-divider">
+
+      <h2>Directeur de la publication</h2>
+      <p>Dorian Longuépée — <a href="mailto:dl.automatisation@gmail.com">dl.automatisation@gmail.com</a></p>
+
+      <hr class="legal-divider">
+
+      <h2>Hébergeur</h2>
+      <p>
+        <em>Netlify</em><br>
+        Adresse : <em>2000 Regency Parkway, Suite 100, Cary, NC 27518</em><br>
+        Site : <em>netlify.com</em>
+      </p>
+
+      <hr class="legal-divider">
+
+      <h2>Propriété intellectuelle</h2>
+      <p>
+        L'ensemble des éléments constituant ce site (textes, visuels, structure, code) est la propriété exclusive de
+        Dorian Longuépée, sauf mention contraire. Toute reproduction, représentation ou diffusion, totale ou partielle,
+        sans autorisation préalable écrite est interdite et constitue une contrefaçon sanctionnée par les articles
+        L.335-2 et suivants du Code de la propriété intellectuelle.
+      </p>
+
+      <hr class="legal-divider">
+
+      <h2>Limitation de responsabilité</h2>
+      <p>
+        Les informations publiées sur ce site sont présentées à titre indicatif, sans garantie d'exhaustivité ou
+        d'exactitude. DL - Automation se réserve le droit de modifier le contenu du site sans préavis et décline toute
+        responsabilité pour tout préjudice direct ou indirect résultant de l'utilisation des informations publiées.
+      </p>
+
+      <hr class="legal-divider">
+
+      <h2>Liens hypertextes</h2>
+      <p>
+        Ce site peut contenir des liens vers des sites tiers. DL - Automation n'exerce aucun contrôle sur ces sites et
+        n'est pas responsable de leur contenu.
+      </p>
+    </div>
+  </div>
+
+  <!-- PAGE: POLITIQUE DE CONFIDENTIALITÉ -->
+  <div id="page-privacy" class="page">
+    <div class="legal-page">
+      <button class="legal-back" onclick="showPage('home')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 5l-7 7 7 7" />
+        </svg>
+        Retour à l'accueil
+      </button>
+      <h1>Politique de confidentialité</h1>
+      <p class="legal-date">En vigueur au 14 avril 2026 — Conforme au RGPD (UE) 2016/679</p>
+
+      <h2>Responsable du traitement</h2>
+      <p>
+        <strong>Dorian Longuépée</strong> — DL - Automation<br>
+        Tours, France<br>
+        Contact : <a href="mailto:dl.automatisation@gmail.com">dl.automatisation@gmail.com</a>
+      </p>
+
+      <hr class="legal-divider">
+
+      <h2>Données collectées</h2>
+      <p>Dans le cadre de l'utilisation de ce site et de ses services, les données suivantes peuvent être collectées :
+      </p>
+      <ul>
+        <li><strong>Via le formulaire de contact (Tally.so) :</strong> nom, prénom, adresse e-mail, numéro de téléphone,
+          nom du cabinet, description du besoin.</li>
+        <li><strong>Via le calendrier de réservation (Cal.com) :</strong> nom, prénom, adresse e-mail, créneau choisi.
+        </li>
+        <li><strong>Via les paiements (Stripe) :</strong> informations de facturation transmises directement à Stripe —
+          DL - Automation n'a pas accès aux données de carte bancaire.</li>
+        <li><strong>Données de navigation :</strong> adresse IP, type de navigateur, pages consultées (via les journaux
+          du serveur, sans dépôt de cookies de tracking tiers).</li>
+      </ul>
+
+      <hr class="legal-divider">
+
+      <h2>Finalités et bases légales</h2>
+      <ul>
+        <li><strong>Traitement des demandes de contact :</strong> intérêt légitime (art. 6.1.f RGPD).</li>
+        <li><strong>Exécution des prestations :</strong> exécution d'un contrat (art. 6.1.b RGPD).</li>
+        <li><strong>Facturation et obligations comptables :</strong> obligation légale (art. 6.1.c RGPD).</li>
+        <li><strong>Amélioration du service :</strong> intérêt légitime (art. 6.1.f RGPD).</li>
+      </ul>
+
+      <hr class="legal-divider">
+
+      <h2>Durée de conservation</h2>
+      <ul>
+        <li>Données de contact et de prospection : <strong>3 ans</strong> à compter du dernier contact.</li>
+        <li>Données contractuelles et de facturation : <strong>10 ans</strong> conformément aux obligations comptables
+          françaises.</li>
+        <li>Données de navigation : <strong>12 mois</strong> maximum.</li>
+      </ul>
+
+      <hr class="legal-divider">
+
+      <h2>Sous-traitants et transferts</h2>
+      <p>DL - Automation utilise les outils suivants dans le cadre de ses prestations :</p>
+      <ul>
+        <li><strong>Tally.so</strong> (formulaires) — Belgique, conforme RGPD</li>
+        <li><strong>Cal.com</strong> (prise de rendez-vous) — États-Unis, clauses contractuelles types</li>
+        <li><strong>Stripe</strong> (paiements) — États-Unis/UE, conforme RGPD et PCI-DSS</li>
+        <li><strong>Google Workspace</strong> (messagerie, Drive) — États-Unis, clauses contractuelles types</li>
+        <li><strong>N8N</strong> / <strong>Airtable</strong> (automatisation et CRM) — accès restreint, données
+          chiffrées</li>
+      </ul>
+      <p>Aucune donnée n'est vendue ni cédée à des tiers à des fins commerciales.</p>
+
+      <hr class="legal-divider">
+
+      <h2>Vos droits</h2>
+      <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+      <ul>
+        <li><strong>Droit d'accès</strong> à vos données personnelles</li>
+        <li><strong>Droit de rectification</strong> des données inexactes</li>
+        <li><strong>Droit à l'effacement</strong> (« droit à l'oubli »)</li>
+        <li><strong>Droit à la limitation</strong> du traitement</li>
+        <li><strong>Droit à la portabilité</strong> de vos données</li>
+        <li><strong>Droit d'opposition</strong> au traitement</li>
+      </ul>
+      <p>
+        Pour exercer ces droits, contactez : <a
+          href="mailto:dl.automatisation@gmail.com">dl.automatisation@gmail.com</a><br>
+        Délai de réponse : 30 jours maximum. En cas de réclamation non résolue, vous pouvez saisir la <a
+          href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>.
+      </p>
+
+      <hr class="legal-divider">
+
+      <h2>Cookies</h2>
+      <p>
+        Ce site n'utilise pas de cookies de tracking ou de publicité. Des cookies techniques strictement nécessaires au
+        bon fonctionnement peuvent être déposés par les outils tiers intégrés (Tally, Cal.com). Vous pouvez les
+        désactiver dans les paramètres de votre navigateur, ce qui peut affecter l'utilisation des formulaires.
+      </p>
+    </div>
+  </div>
+
+  <!-- PAGE: CGV -->
+  <div id="page-cgv" class="page">
+    <div class="legal-page">
+      <button class="legal-back" onclick="showPage('home')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 5l-7 7 7 7" />
+        </svg>
+        Retour à l'accueil
+      </button>
+      <h1>Conditions Générales de Vente</h1>
+      <p class="legal-date">En vigueur au 14 avril 2026</p>
+
+      <h2>1. Objet</h2>
+      <p>
+        Les présentes Conditions Générales de Vente (CGV) régissent les relations commerciales entre <strong>Dorian
+          Longuépée</strong>, auto-entrepreneur exerçant sous le nom DL - Automation (ci-après « le Prestataire »), et
+        tout professionnel souhaitant bénéficier de ses services d'automatisation (ci-après « le Client »).
+      </p>
+
+      <h2>2. Services proposés</h2>
+      <p>Le Prestataire propose les prestations suivantes :</p>
+      <ul>
+        <li><strong>Pack Pilote – Découverte (350 € HT) :</strong> analyse automatisée de 5 dossiers clients, rapport de
+          résultats, appel de restitution. Sans engagement.</li>
+        <li><strong>Pack Standard :</strong> déploiement complet du système d'automatisation pour un volume mensuel
+          défini de dossiers. Résiliable à tout moment.</li>
+        <li><strong>Pack Premium :</strong> automatisation avancée, intégrations personnalisées, accompagnement
+          prioritaire. Résiliable à tout moment.</li>
+        <li><strong>Prestations sur mesure :</strong> développement de workflows spécifiques sur devis.</li>
+      </ul>
+      <p>Le détail des prestations, des volumes traités et des tarifs en vigueur est disponible sur la page <button
+          class="legal-back" style="display:inline;margin:0;font-size:inherit"
+          onclick="showPage('home')">Tarifs</button> du site.</p>
+
+      <h2>3. Commande et formation du contrat</h2>
+      <p>
+        La commande est formalisée par le paiement en ligne via la plateforme Stripe ou par la signature d'un devis pour
+        les prestations sur mesure. Le contrat est réputé conclu à réception du paiement ou de la commande signée.
+      </p>
+
+      <h2>4. Tarifs et paiement</h2>
+      <p>
+        Les prix sont exprimés en euros, hors taxes (TVA non applicable – art. 293 B du CGI). Le paiement s'effectue en
+        ligne par carte bancaire via Stripe, ou par virement bancaire sur devis. Tout retard de paiement entraîne
+        l'application d'une pénalité de 3 fois le taux d'intérêt légal, ainsi qu'une indemnité forfaitaire de 40 € pour
+        frais de recouvrement (art. L.441-10 du Code de commerce).
+      </p>
+
+      <h2>5. Délais d'exécution</h2>
+      <p>
+        Le Prestataire s'engage à déployer le système d'automatisation dans un délai indicatif de <strong>10 jours
+          ouvrés</strong> à compter de la réception des éléments nécessaires fournis par le Client. Ce délai peut être
+        ajusté d'un commun accord en cas de complexité particulière.
+      </p>
+
+      <h2>6. Obligations du Client</h2>
+      <ul>
+        <li>Fournir les documents et accès nécessaires dans les délais convenus.</li>
+        <li>Désigner un interlocuteur référent disponible pour les phases de validation.</li>
+        <li>S'assurer de la légalité des données transmises au Prestataire.</li>
+      </ul>
+
+      <h2>7. Résiliation</h2>
+      <p>
+        Le Pack Pilote est sans engagement. Les packs mensuels sont résiliables à tout moment, avec un préavis de
+        <strong>30 jours</strong> avant la prochaine date de facturation. La résiliation se fait par e-mail à <a
+          href="mailto:dl.automatisation@gmail.com">dl.automatisation@gmail.com</a>. Les sommes déjà versées ne sont pas
+        remboursables.
+      </p>
+
+      <h2>8. Propriété intellectuelle</h2>
+      <p>
+        Les workflows, scripts et outils développés par le Prestataire restent sa propriété intellectuelle jusqu'au
+        paiement intégral de la prestation. Une fois la prestation réglée, le Client dispose d'une licence d'utilisation
+        non exclusive sur les livrables produits.
+      </p>
+
+      <h2>9. Confidentialité et RGPD</h2>
+      <p>
+        Le Prestataire s'engage à traiter les données transmises par le Client dans le strict cadre de la prestation et
+        à ne pas les divulguer à des tiers. Les données financières des clients finaux sont traitées conformément au
+        RGPD. Une convention de traitement des données (DPA) peut être signée sur demande.
+      </p>
+
+      <h2>10. Responsabilité</h2>
+      <p>
+        La responsabilité du Prestataire est limitée au montant des sommes versées pour la prestation concernée. Le
+        Prestataire ne saurait être tenu responsable des préjudices indirects (perte de chiffre d'affaires, perte de
+        données, etc.) sauf en cas de faute lourde ou dolosive.
+      </p>
+
+      <h2>11. Droit applicable et litiges</h2>
+      <p>
+        Les présentes CGV sont soumises au droit français. En cas de litige, les parties s'engagent à rechercher une
+        solution amiable. À défaut, le litige sera porté devant les tribunaux compétents du ressort de Tours.
+      </p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container-wide">
+      <div class="footer-inner">
+        <div class="footer-brand">DL - Automation</div>
+        <div class="footer-meta">Tours, France · dl.automatisation@gmail.com · TVA non applicable, art. 293 B CGI</div>
+      </div>
+      <div class="footer-links" style="margin-top:var(--space-4)">
+        <button class="footer-link" onclick="showPage('mentions')">Mentions légales</button>
+        <button class="footer-link" onclick="showPage('privacy')">Politique de confidentialité</button>
+        <button class="footer-link" onclick="showPage('cgv')">CGV</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
